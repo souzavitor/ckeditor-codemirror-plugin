@@ -1,0 +1,34 @@
+{
+  "name": "ckeditor-codemirror-plugin",
+  "description": "plugin to add codemirror to ckeditor source view",
+  "main": "index.js",
+  "authors": [
+    "souzavitor"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ckeditor",
+    "codemirror",
+    "source",
+    "code",
+    "plugin",
+    "wysiwyg",
+    "ckeditor",
+    "plugin"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "codemirror": "CodeMirror#~5.9.0",
+    "codemirror-emmet": "~1.1.0"
+  }
+}
