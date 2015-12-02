@@ -62,8 +62,6 @@ config.codemirror = {
     // Whether or not to show the uncomment button on the toolbar
     showUncommentButton: true,
 
-    // Enable emmet hotkeys
-    emmet: true,
     // define Emmet output profile
     profile: 'xhtml',
 
@@ -71,6 +69,10 @@ config.codemirror = {
     beautify: true    
 };
 ```
+
+##TODO
+ - Source Code dialog implementation;
+ - Auto load CodeMirror and Beautify scripts;
 
 ##License
 Licensed under the terms of the MIT License.
