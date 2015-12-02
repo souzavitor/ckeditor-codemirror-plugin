@@ -101,6 +101,8 @@
                 config.lineWrapping = true;
                 config.showCursorWhenSelecting = true;
                 config.gutters = ["CodeMirror-linenumbers", "CodeMirror-foldgutter"];
+                config.tabSize = 4;
+                config.indentUnit = 4;
                 window["codemirror_" + editor.id] = CodeMirror.fromTextArea(sourceAreaElement.$, config);
 
                 if (config.beautify && typeof html_beautify === 'function') {
