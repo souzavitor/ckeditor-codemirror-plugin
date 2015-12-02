@@ -19,7 +19,7 @@
   "moduleType": [
     "globals"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/souzavitor/ckeditor-codemirror-plugin.git",
   "ignore": [
     "**/.*",
     "node_modules",
