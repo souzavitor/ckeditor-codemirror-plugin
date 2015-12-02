@@ -6,6 +6,24 @@ Plugin to include CodeMirror for source code editing for CKEditor editor. The pl
 ##Instalation
 The plugin does not load CodeMirror scripts automatically , so you need the user to manually make for each desired functionality.
 
+The scripts you need to load from CodeMirror are:
+ - 'codemirror/lib/codemirror.js';
+ - 'codemirror/mode/css/css.js';
+ - 'codemirror/mode/xml/xml.js';
+ - 'codemirror/mode/javascript/javascript.js';
+ - 'codemirror/mode/htmlmixed/htmlmixed.js';
+ - 'codemirror/addon/edit/closetag.js'; (for auto close tags plugin)
+ - 'codemirror/addon/edit/trailingspace.js';
+ - 'codemirror/addon/comment/comment.js'; (for comment plugin)
+ - 'codemirror/addon/fold/foldcode.js'; (for code folding)
+ - 'codemirror/addon/fold/foldgutter.js'; (for code folding)
+ - 'codemirror/addon/fold/xml-fold.js'; (for code folding)
+ - 'codemirror-emmet/dist/emmet.js'; (for codemirror-emmet plugin)
+
+And the styles you need to load are:
+ - 'codemirror/lib/codemirror.css';
+ - 'codemirror/addon/fold/foldgutter.css'; (for code folding)
+
 1. Extract the contents of the codemirror folder into the "plugins" folder of CKEditor;
 2. In the CKEditor configuration file (./config.js) add the following code: `config.extraPlugins = 'codemirror';`;
 
@@ -42,7 +60,15 @@ config.codemirror = {
     showTrailingSpace: true,
 
     // Whether or not to show the uncomment button on the toolbar
-    showUncommentButton: true    
+    showUncommentButton: true,
+
+    // Enable emmet hotkeys
+    emmet: true,
+    // define Emmet output profile
+    profile: 'xhtml',
+
+    // Enable beautify code on startup source code mode
+    beautify: true    
 };
 ```
 

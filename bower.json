@@ -29,6 +29,7 @@
   ],
   "dependencies": {
     "codemirror": "CodeMirror#~5.9.0",
-    "codemirror-emmet": "~1.1.0"
+    "codemirror-emmet": "~1.1.0",
+    "js-beautify": "~1.5.10"
   }
 }

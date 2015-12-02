@@ -19,7 +19,12 @@
                 showAutoCompleteButton: true,
                 showCommentButton: true,
                 showTrailingSpace: true,
-                showUncommentButton: true
+                showUncommentButton: true,
+
+                // define Emmet output profile
+                profile: 'xhtml',
+
+                beautify: true
             };
             var config = CKEDITOR.tools.extend(defaultConfig, editor.config.codemirror || {}, true);
             var lang = editor.lang.codemirror;
@@ -97,6 +102,16 @@
                 config.showCursorWhenSelecting = true;
                 config.gutters = ["CodeMirror-linenumbers", "CodeMirror-foldgutter"];
                 window["codemirror_" + editor.id] = CodeMirror.fromTextArea(sourceAreaElement.$, config);
+
+                if (config.beautify && typeof html_beautify === 'function') {
+                    var options = {
+                        indent_size: 4,
+                        indent_char: ' ',
+                        wrap_line_length: 0
+                    };
+                    var source = window["codemirror_" + editor.id].getValue();
+                    window["codemirror_" + editor.id].setValue(html_beautify(source, options));
+                }
 
                 // set height inherit
                 window["codemirror_" + editor.id].setSize(null, 'inherit');
