@@ -4,12 +4,16 @@
         lang: 'pt-br,en',
         version: 1.0,
         init: function(editor) {
+            if (typeof CodeMirror === 'undefined') {
+                throw lang.codemirrorNotDefined;
+            }
             var defaultConfig = {
+                theme : 'default',
                 autoCloseTags: true,
                 enableCodeFolding: true,
                 lineNumbers: true,
                 lineWrapping: true,
-                mode: 'htmlmixed',
+
                 matchTags: true,
 
                 showAutoCompleteButton: true,
@@ -85,6 +89,7 @@
                     window["foldFunc_" + editor.id] = CodeMirror.newFoldFunction(CodeMirror.tagRangeFinder);
                 }
 
+                config.mode = 'htmlmixed';
                 config.workDelay = 300;
                 config.workTime = 35;
                 config.readOnly = editor.readOnly;
@@ -116,9 +121,6 @@
 
             var sourcearea = CKEDITOR.plugins.sourcearea;
             editor.addMode('source', function (callback) {
-                if (typeof CodeMirror === 'undefined') {
-                    throw lang.codemirrorNotDefined;
-                }
                 loadCodemirror(editor);
                 callback();
             });
