@@ -1,6 +1,6 @@
 (function(){
     CKEDITOR.plugins.add('codemirror', {
-        icons: 'searchcode,autoformat,commentselectedrange,uncommentselectedrange,autocomplete',
+        icons: 'commentselectedrange,uncommentselectedrange,autocomplete',
         lang: 'pt-br,en',
         version: 1.0,
         init: function(editor) {
