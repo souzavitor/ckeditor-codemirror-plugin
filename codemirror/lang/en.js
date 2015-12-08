@@ -1,4 +1,4 @@
-CKEDITOR.plugins.setLang('codemirror', 'us', {
+CKEDITOR.plugins.setLang('codemirror', 'en', {
 	codemirrorNotDefined: 'CodeMirror has not been included',
     toolbar: 'Source Code',
     commentSelectedRange: 'Comment Selection',

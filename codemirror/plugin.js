@@ -4,6 +4,7 @@
         lang: 'pt-br,en',
         version: 1.0,
         init: function(editor) {
+            var lang = editor.lang.codemirror;
             if (typeof CodeMirror === 'undefined') {
                 throw lang.codemirrorNotDefined;
             }
@@ -27,7 +28,6 @@
                 beautify: true
             };
             var config = CKEDITOR.tools.extend(defaultConfig, editor.config.codemirror || {}, true);
-            var lang = editor.lang.codemirror;
 
             // SourceEditable class
             var SourceEditable = CKEDITOR.tools.createClass({
